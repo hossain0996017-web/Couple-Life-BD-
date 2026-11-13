@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171326">
+<title>Couple Life BD</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#100e19;color:#fff;font-family:Arial,"Noto Sans Bengali",sans-serif;line-height:1.7}
+header{padding:16px 5%;background:#1c1928;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:sticky;top:0}
+.logo{font-size:23px;font-weight:bold;color:#ff80ad}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+a{color:#fff;text-decoration:none}
+button{padding:9px 15px;border:0;border-radius:20px;background:#ff80ad;color:#241426;font-weight:bold}
+.hero{text-align:center;padding:65px 7%;background:linear-gradient(140deg,#492344,#211b37)}
+.hero h1{font-size:38px;color:#ff9cbd}
+.hero p{max-width:650px;margin:auto}
+section{padding:40px 6%}
+h2{color:#ff91b5}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:#211d30;border:1px solid #42364e;padding:22px;border-radius:18px}
+.card h3{color:#f6c5d7}
+footer{text-align:center;padding:25px;background:#1c1928;color:#ccc}
+select{padding:9px;border-radius:15px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">♡ Couple Life BD</div>
+<nav>
+<a href="#home" data-bn="হোম" data-en="Home">হোম</a>
+<a href="#married" data-bn="দাম্পত্য জীবন" data-en="Married Life">দাম্পত্য জীবন</a>
+<a href="#learn" data-bn="শিক্ষা" data-en="Learning">শিক্ষা</a>
+<a href="#stories" data-bn="গল্প" data-en="Stories">গল্প</a>
+</nav>
+<select id="language" onchange="changeLanguage()">
+<option value="bn">বাংলা</option>
+<option value="en">English</option>
+</select>
+</header>
+
+<main>
+<div class="hero" id="home">
+<h1 data-bn="সম্পর্ককে জানুন, যত্নে রাখুন ❤️" data-en="Understand Love, Care for Each Other ❤️">সম্পর্ককে জানুন, যত্নে রাখুন ❤️</h1>
+<p data-bn="ভালোবাসা, দাম্পত্য জীবন, পারস্পরিক সম্মতি ও সুস্থ সম্পর্ক নিয়ে একটি সুন্দর শিক্ষামূলক প্ল্যাটফর্ম।"
+data-en="A welcoming educational platform about love, married life, mutual consent and healthy relationships.">ভালোবাসা, দাম্পত্য জীবন, পারস্পরিক সম্মতি ও সুস্থ সম্পর্ক নিয়ে একটি সুন্দর শিক্ষামূলক প্ল্যাটফর্ম।</p>
+</div>
+
+<section id="married">
+<h2 data-bn="💞 দাম্পত্য জীবন" data-en="💞 Married Life">💞 দাম্পত্য জীবন</h2>
+<div class="grid">
+<div class="card">
+<h3 data-bn="স্বামী-স্ত্রীর ভালোবাসা" data-en="Love Between Partners">স্বামী-স্ত্রীর ভালোবাসা</h3>
+<p data-bn="বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।" data-en="Build a strong relationship through trust, respect and care.">বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।</p>
+</div>
+<div class="card">
+<h3 data-bn="নববিবাহিতদের গাইড" data-en="Newlywed Guide">নববিবাহিতদের গাইড</h3>
+<p data-bn="নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।" data-en="Guidance for adjusting to a new life together.">নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।</p>
+</div>
+<div class="card">
+<h3 data-bn="ব্যক্তিগত সম্পর্ক" data-en="Private Relationships">ব্যক্তিগত সম্পর্ক</h3>
+<p data-bn="ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।" data-en="The importance of boundaries, comfort and mutual consent.">ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।</p>
+</div>
+</div>
+</section>
+
+<section id="learn">
+<h2 data-bn="📚 শিক্ষা ও সচেতনতা" data-en="📚 Education & Awareness">📚 শিক্ষা ও সচেতনতা</h2>
+<div class="grid">
+<div class="card">
+<h3 data-bn="যৌনস্বাস্থ্য" data-en="Sexual Health">যৌনস্বাস্থ্য</h3>
+<p data-bn="নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।" data-en="Safer sex, contraception and health awareness.">নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।</p>
+</div>
+<div class="card">
+<h3 data-bn="পারস্পরিক সম্মতি" data-en="Mutual Consent">পারস্পরিক সম্মতি</h3>
+<p data-bn="প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।" data-en="Both partners' wishes and respect matter in every relationship.">প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।</p>
+</div>
+<div class="card">
+<h3 data-bn="সম্পর্কের যত্ন" data-en="Relationship Care">সম্পর্কের যত্ন</h3>
+<p data-bn="যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।" data-en="Nurture relationships with communication, patience and understanding.">যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।</p>
+</div>
+</div>
+</section>
+
+<section id="stories">
+<h2 data-bn="💕 ভালোবাসার গল্প" data-en="💕 Love Stories">💕 ভালোবাসার গল্প</h2>
+<div class="grid">
+<div class="card">
+<h3 data-bn="প্রথম দেখা" data-en="The First Meeting">প্রথম দেখা</h3>
+<p data-bn="একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।" data-en="A beautiful love story can begin with a simple meeting.">একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।</p>
+</div>
+<div class="card">
+<h3 data-bn="একসাথে পথচলা" data-en="Walking Together">একসাথে পথচলা</h3>
+<p data-bn="সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।" data-en="True love means standing together through good times and bad.">সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 data-bn="🎬 শিক্ষামূলক অ্যানিমেশন" data-en="🎬 Educational Animations">🎬 শিক্ষামূলক অ্যানিমেশন</h2>
+<div class="card">
+<p data-bn="এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।" data-en="Beautiful 2D cartoon animations about relationships, health and married life will be added here.">এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।</p>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>Couple Life BD</strong>
+<p data-bn="ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক" data-en="Love • Education • Healthy Relationships">ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক</p>
+<p>© 2026 Couple Life BD</p>
+</footer>
+
+<script>
+function changeLanguage(){
+ const lang=document.getElementById("language").value;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-bn]").forEach(el=>{
+  el.textContent=el.getAttribute("data-"+lang);
+ });
+}
+</script>
+</body>
+</html>
