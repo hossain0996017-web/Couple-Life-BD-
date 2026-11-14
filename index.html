@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -6,120 +5,357 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#171326">
 <title>Couple Life BD</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#100e19;color:#fff;font-family:Arial,"Noto Sans Bengali",sans-serif;line-height:1.7}
-header{padding:16px 5%;background:#1c1928;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:sticky;top:0}
+body{
+ margin:0;background:#100e19;color:#fff;
+ font-family:Arial,"Noto Sans Bengali",sans-serif;
+ line-height:1.7
+}
+header{
+ padding:16px 5%;background:#1c1928;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;gap:12px;
+ position:sticky;top:0;z-index:10
+}
 .logo{font-size:23px;font-weight:bold;color:#ff80ad}
 nav{display:flex;gap:15px;flex-wrap:wrap}
 a{color:#fff;text-decoration:none}
-button{padding:9px 15px;border:0;border-radius:20px;background:#ff80ad;color:#241426;font-weight:bold}
-.hero{text-align:center;padding:65px 7%;background:linear-gradient(140deg,#492344,#211b37)}
+nav a:hover{color:#ff80ad}
+button{
+ padding:9px 15px;border:0;border-radius:20px;
+ background:#ff80ad;color:#241426;
+ font-weight:bold;cursor:pointer
+}
+button:hover{background:#ffb0ca}
+.hero{
+ text-align:center;padding:65px 7%;
+ background:linear-gradient(140deg,#492344,#211b37)
+}
 .hero h1{font-size:38px;color:#ff9cbd}
 .hero p{max-width:650px;margin:auto}
 section{padding:40px 6%}
 h2{color:#ff91b5}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.card{background:#211d30;border:1px solid #42364e;padding:22px;border-radius:18px}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:17px
+}
+.card{
+ background:#211d30;border:1px solid #42364e;
+ padding:22px;border-radius:18px;
+ display:flex;flex-direction:column;gap:10px
+}
 .card h3{color:#f6c5d7}
-footer{text-align:center;padding:25px;background:#1c1928;color:#ccc}
+.card button{align-self:flex-start;margin-top:auto}
+footer{
+ text-align:center;padding:25px;
+ background:#1c1928;color:#ccc
+}
 select{padding:9px;border-radius:15px}
+#detailPage{
+ display:none;padding:40px 7%;min-height:65vh
+}
+.detail-box{
+ max-width:800px;margin:auto;padding:25px;
+ background:#211d30;border:1px solid #42364e;
+ border-radius:18px
+}
+.detail-box h2{color:#ff91b5}
+#detailText{white-space:pre-line}
+.back-btn{margin-bottom:20px}
+@media(max-width:600px){
+ .hero h1{font-size:28px}
+ header{justify-content:center}
+ nav{justify-content:center}
+ section{padding:28px 5%}
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="logo">♡ Couple Life BD</div>
+
 <nav>
 <a href="#home" data-bn="হোম" data-en="Home">হোম</a>
 <a href="#married" data-bn="দাম্পত্য জীবন" data-en="Married Life">দাম্পত্য জীবন</a>
 <a href="#learn" data-bn="শিক্ষা" data-en="Learning">শিক্ষা</a>
 <a href="#stories" data-bn="গল্প" data-en="Stories">গল্প</a>
 </nav>
+
 <select id="language" onchange="changeLanguage()">
 <option value="bn">বাংলা</option>
 <option value="en">English</option>
 </select>
 </header>
 
+<div id="homeContent">
+
 <main>
+
 <div class="hero" id="home">
-<h1 data-bn="সম্পর্ককে জানুন, যত্নে রাখুন ❤️" data-en="Understand Love, Care for Each Other ❤️">সম্পর্ককে জানুন, যত্নে রাখুন ❤️</h1>
+<h1 data-bn="সম্পর্ককে জানুন, যত্নে রাখুন ❤️"
+data-en="Understand Love, Care for Each Other ❤️">
+সম্পর্ককে জানুন, যত্নে রাখুন ❤️
+</h1>
+
 <p data-bn="ভালোবাসা, দাম্পত্য জীবন, পারস্পরিক সম্মতি ও সুস্থ সম্পর্ক নিয়ে একটি সুন্দর শিক্ষামূলক প্ল্যাটফর্ম।"
-data-en="A welcoming educational platform about love, married life, mutual consent and healthy relationships.">ভালোবাসা, দাম্পত্য জীবন, পারস্পরিক সম্মতি ও সুস্থ সম্পর্ক নিয়ে একটি সুন্দর শিক্ষামূলক প্ল্যাটফর্ম।</p>
+data-en="A welcoming educational platform about love, married life, mutual consent and healthy relationships.">
+ভালোবাসা, দাম্পত্য জীবন, পারস্পরিক সম্মতি ও সুস্থ সম্পর্ক নিয়ে একটি সুন্দর শিক্ষামূলক প্ল্যাটফর্ম।
+</p>
 </div>
 
 <section id="married">
 <h2 data-bn="💞 দাম্পত্য জীবন" data-en="💞 Married Life">💞 দাম্পত্য জীবন</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3 data-bn="স্বামী-স্ত্রীর ভালোবাসা" data-en="Love Between Partners">স্বামী-স্ত্রীর ভালোবাসা</h3>
-<p data-bn="বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।" data-en="Build a strong relationship through trust, respect and care.">বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।</p>
+<p data-bn="বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।"
+data-en="Build a strong relationship through trust, respect and care.">
+বিশ্বাস, সম্মান ও যত্নের মাধ্যমে সুন্দর সম্পর্ক গড়ে তোলার উপায়।
+</p>
+<button onclick="openDetail('love')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 <div class="card">
 <h3 data-bn="নববিবাহিতদের গাইড" data-en="Newlywed Guide">নববিবাহিতদের গাইড</h3>
-<p data-bn="নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।" data-en="Guidance for adjusting to a new life together.">নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।</p>
+<p data-bn="নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।"
+data-en="Guidance for adjusting to a new life together.">
+নতুন জীবনে মানিয়ে নেওয়া ও একে অপরকে বোঝার পরামর্শ।
+</p>
+<button onclick="openDetail('newlywed')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 <div class="card">
 <h3 data-bn="ব্যক্তিগত সম্পর্ক" data-en="Private Relationships">ব্যক্তিগত সম্পর্ক</h3>
-<p data-bn="ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।" data-en="The importance of boundaries, comfort and mutual consent.">ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।</p>
+<p data-bn="ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।"
+data-en="The importance of boundaries, comfort and mutual consent.">
+ব্যক্তিগত সীমারেখা, স্বাচ্ছন্দ্য ও পারস্পরিক সম্মতির গুরুত্ব।
+</p>
+<button onclick="openDetail('relationship')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 </div>
 </section>
 
 <section id="learn">
 <h2 data-bn="📚 শিক্ষা ও সচেতনতা" data-en="📚 Education & Awareness">📚 শিক্ষা ও সচেতনতা</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3 data-bn="যৌনস্বাস্থ্য" data-en="Sexual Health">যৌনস্বাস্থ্য</h3>
-<p data-bn="নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।" data-en="Safer sex, contraception and health awareness.">নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।</p>
+<p data-bn="নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।"
+data-en="Safer sex, contraception and health awareness.">
+নিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ ও স্বাস্থ্য সচেতনতা।
+</p>
+<button onclick="openDetail('health')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 <div class="card">
 <h3 data-bn="পারস্পরিক সম্মতি" data-en="Mutual Consent">পারস্পরিক সম্মতি</h3>
-<p data-bn="প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।" data-en="Both partners' wishes and respect matter in every relationship.">প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।</p>
+<p data-bn="প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।"
+data-en="Both partners' wishes and respect matter in every relationship.">
+প্রতিটি সম্পর্কে দুজনের ইচ্ছা ও সম্মান গুরুত্বপূর্ণ।
+</p>
+<button onclick="openDetail('consent')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 <div class="card">
 <h3 data-bn="সম্পর্কের যত্ন" data-en="Relationship Care">সম্পর্কের যত্ন</h3>
-<p data-bn="যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।" data-en="Nurture relationships with communication, patience and understanding.">যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।</p>
+<p data-bn="যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।"
+data-en="Nurture relationships with communication, patience and understanding.">
+যোগাযোগ, ধৈর্য ও বোঝাপড়ার মাধ্যমে সম্পর্ক সুন্দর রাখুন।
+</p>
+<button onclick="openDetail('care')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 </div>
 </section>
 
 <section id="stories">
 <h2 data-bn="💕 ভালোবাসার গল্প" data-en="💕 Love Stories">💕 ভালোবাসার গল্প</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3 data-bn="প্রথম দেখা" data-en="The First Meeting">প্রথম দেখা</h3>
-<p data-bn="একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।" data-en="A beautiful love story can begin with a simple meeting.">একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।</p>
+<p data-bn="একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।"
+data-en="A beautiful love story can begin with a simple meeting.">
+একটি সুন্দর পরিচয় থেকে ভালোবাসার গল্প শুরু হতে পারে।
+</p>
+<button onclick="openDetail('first')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 <div class="card">
 <h3 data-bn="একসাথে পথচলা" data-en="Walking Together">একসাথে পথচলা</h3>
-<p data-bn="সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।" data-en="True love means standing together through good times and bad.">সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।</p>
+<p data-bn="সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।"
+data-en="True love means standing together through good times and bad.">
+সুখে-দুঃখে পাশে থাকার নামই সত্যিকারের ভালোবাসা।
+</p>
+<button onclick="openDetail('together')" data-bn="বিস্তারিত পড়ুন" data-en="Read More">বিস্তারিত পড়ুন</button>
 </div>
+
 </div>
 </section>
 
-<section>
+<section id="animation">
 <h2 data-bn="🎬 শিক্ষামূলক অ্যানিমেশন" data-en="🎬 Educational Animations">🎬 শিক্ষামূলক অ্যানিমেশন</h2>
 <div class="card">
-<p data-bn="এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।" data-en="Beautiful 2D cartoon animations about relationships, health and married life will be added here.">এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।</p>
+<p data-bn="এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।"
+data-en="Beautiful 2D cartoon animations about relationships, health and married life will be added here.">
+এখানে সম্পর্ক, স্বাস্থ্য ও দাম্পত্য জীবন নিয়ে সুন্দর 2D কার্টুন অ্যানিমেশন যুক্ত করা হবে।
+</p>
 </div>
 </section>
+
 </main>
+</div>
+
+<div id="detailPage">
+<button class="back-btn" onclick="goBack()"
+data-bn="← ফিরে যান" data-en="← Go Back">← ফিরে যান</button>
+
+<div class="detail-box">
+<h2 id="detailTitle"></h2>
+<p id="detailText"></p>
+</div>
+</div>
 
 <footer>
 <strong>Couple Life BD</strong>
-<p data-bn="ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক" data-en="Love • Education • Healthy Relationships">ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক</p>
+<p data-bn="ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক"
+data-en="Love • Education • Healthy Relationships">
+ভালোবাসা • শিক্ষা • সুস্থ সম্পর্ক
+</p>
 <p>© 2026 Couple Life BD</p>
 </footer>
 
 <script>
-function changeLanguage(){
- const lang=document.getElementById("language").value;
- document.documentElement.lang=lang;
- document.querySelectorAll("[data-bn]").forEach(el=>{
-  el.textContent=el.getAttribute("data-"+lang);
- });
+
+const details = {
+
+love:{
+titleBn:"স্বামী-স্ত্রীর ভালোবাসা",
+titleEn:"Love Between Partners",
+bn:"সুন্দর দাম্পত্য জীবনের ভিত্তি হলো বিশ্বাস, সম্মান ও ভালোবাসা।\n\n১. একে অপরের কথা মন দিয়ে শুনুন।\n২. ছোট ছোট বিষয়ে কৃতজ্ঞতা প্রকাশ করুন।\n৩. সমস্যা হলে শান্তভাবে আলোচনা করুন।\n৪. একে অপরের ব্যক্তিগত সময় ও পছন্দকে সম্মান করুন।",
+en:"A healthy marriage is built on trust, respect and love.\n\n1. Listen carefully to each other.\n2. Express appreciation.\n3. Discuss problems calmly.\n4. Respect each other's time and preferences."
+},
+
+newlywed:{
+titleBn:"নববিবাহিতদের গাইড",
+titleEn:"Newlywed Guide",
+bn:"নতুন জীবনে দুজনের অভ্যাস ও প্রত্যাশা আলাদা হতে পারে।\n\n১. সময় নিয়ে একে অপরকে জানুন।\n২. সংসারের দায়িত্ব ভাগ করে নিন।\n৩. আর্থিক বিষয় নিয়ে খোলামেলা কথা বলুন।\n৪. ভুল বোঝাবুঝি হলে আলোচনা করুন।",
+en:"Newlyweds may have different habits and expectations.\n\n1. Take time to understand each other.\n2. Share household responsibilities.\n3. Discuss finances openly.\n4. Resolve misunderstandings through conversation."
+},
+
+relationship:{
+titleBn:"ব্যক্তিগত সম্পর্ক",
+titleEn:"Private Relationships",
+bn:"প্রতিটি মানুষের নিজস্ব পছন্দ, সীমারেখা ও স্বাচ্ছন্দ্য রয়েছে।\n\n১. একে অপরের সীমারেখা সম্মান করুন।\n২. কোনো বিষয়ে চাপ প্রয়োগ করবেন না।\n৩. খোলামেলা যোগাযোগ বজায় রাখুন।\n৪. দুজনের সম্মতিকে গুরুত্ব দিন।",
+en:"Every person has personal preferences and boundaries.\n\n1. Respect each other's boundaries.\n2. Never pressure anyone.\n3. Communicate openly.\n4. Value mutual consent."
+},
+
+health:{
+titleBn:"যৌনস্বাস্থ্য",
+titleEn:"Sexual Health",
+bn:"যৌনস্বাস্থ্য সামগ্রিক স্বাস্থ্যের একটি গুরুত্বপূর্ণ অংশ।\n\nনিরাপদ যৌনতা, জন্মনিয়ন্ত্রণ, পরিচ্ছন্নতা এবং প্রয়োজনীয় স্বাস্থ্য পরীক্ষা সম্পর্কে সঠিক তথ্য জানা জরুরি। ব্যক্তিগত স্বাস্থ্য সমস্যায় যোগ্য চিকিৎসকের পরামর্শ নিন।",
+en:"Sexual health is an important part of overall wellbeing.\n\nLearn about safer sex, contraception, hygiene and appropriate health screening. Consult a qualified healthcare professional for personal medical concerns."
+},
+
+consent:{
+titleBn:"পারস্পরিক সম্মতি",
+titleEn:"Mutual Consent",
+bn:"সম্মতি হতে হবে স্বেচ্ছায় দেওয়া, স্পষ্ট এবং চলমান।\n\n১. দুজনেরই স্বাধীনভাবে সম্মতি থাকা প্রয়োজন।\n২. যেকোনো সময় মত পরিবর্তন করা যায়।\n৩. চাপ, ভয় বা জোর করে নেওয়া সম্মতি নয়।\n৪. না বলার অধিকার সবার আছে।",
+en:"Consent must be freely given, clear and ongoing.\n\n1. Both people must agree freely.\n2. Anyone can change their mind at any time.\n3. Pressure or force is not consent.\n4. Everyone has the right to say no."
+},
+
+care:{
+titleBn:"সম্পর্কের যত্ন",
+titleEn:"Relationship Care",
+bn:"সম্পর্ক সুন্দর রাখতে নিয়মিত যোগাযোগ ও পারস্পরিক সহযোগিতা প্রয়োজন।\n\n১. প্রতিদিন কিছু সময় একসঙ্গে কাটান।\n২. অভিযোগ না করে নিজের অনুভূতি জানান।\n৩. ভুল হলে ক্ষমা চাইতে শিখুন।\n৪. একে অপরকে উৎসাহ দিন।",
+en:"Healthy relationships need communication and cooperation.\n\n1. Spend time together.\n2. Share feelings respectfully.\n3. Learn to apologize.\n4. Encourage each other."
+},
+
+first:{
+titleBn:"প্রথম দেখা",
+titleEn:"The First Meeting",
+bn:"প্রথম পরিচয় অনেক সময় জীবনের সুন্দর স্মৃতি হয়ে থাকে। শ্রদ্ধা, আন্তরিকতা ও বন্ধুত্বের মাধ্যমে একটি সম্পর্ক ধীরে ধীরে গভীর হতে পারে।",
+en:"A first meeting can become a beautiful memory. Respect, sincerity and friendship can help a relationship grow."
+},
+
+together:{
+titleBn:"একসাথে পথচলা",
+titleEn:"Walking Together",
+bn:"জীবনের প্রতিটি সময়ে একে অপরের পাশে থাকা, কঠিন সময়ে সহযোগিতা করা এবং আনন্দ ভাগ করে নেওয়াই একসঙ্গে পথচলার সৌন্দর্য।",
+en:"Standing together, supporting each other in difficult times and sharing joy are the beauty of walking through life together."
 }
+
+};
+
+let currentLanguage = "bn";
+let currentDetail = null;
+
+function openDetail(key){
+
+ currentDetail = key;
+
+ document.getElementById("homeContent").style.display="none";
+ document.getElementById("detailPage").style.display="block";
+
+ showDetail();
+
+ window.scrollTo(0,0);
+}
+
+function showDetail(){
+
+ const item = details[currentDetail];
+
+ if(!item)return;
+
+ document.getElementById("detailTitle").textContent =
+ currentLanguage === "bn" ? item.titleBn : item.titleEn;
+
+ document.getElementById("detailText").textContent =
+ currentLanguage === "bn" ? item.bn : item.en;
+
+}
+
+function goBack(){
+
+ document.getElementById("detailPage").style.display="none";
+ document.getElementById("homeContent").style.display="block";
+
+ currentDetail = null;
+
+ window.scrollTo(0,0);
+}
+
+function changeLanguage(){
+
+ currentLanguage = document.getElementById("language").value;
+
+ document.documentElement.lang = currentLanguage;
+
+ document.querySelectorAll("[data-bn]").forEach(el=>{
+
+  el.textContent = el.getAttribute("data-"+currentLanguage);
+
+ });
+
+ if(currentDetail){
+  showDetail();
+ }
+
+}
+
 </script>
+
 </body>
 </html>
